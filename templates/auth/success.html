@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% comment %} 
+<form method="POST" action="/logout/">
+
+    <p> User  {{ request.user }}  is logged in succesfully </p>
+    {%  csrf_token %}
+
+    <input type="submit"  value="Logout">
+</form> {% endcomment %}
+
+<div class="text-center">
+    <form method="POST" action="/logout/">
+            <p> User  {{ request.user }}  is logged in succesfully </p>
+
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Logout">
+    </form>
+</div>
+
+
+    
+{% endblock content %}
